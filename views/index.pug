@@ -1,7 +1,71 @@
 html
   head
-    title Mon App Tailwind CSS
-    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
   body
-    div
-     p.text-white Bienvenue sur mon site
+    .max-w-screen-xl.mx-auto
+      // header
+      header.flex.items-center.justify-between.py-6.border-b
+        h2.font-bold.text-3xl
+          span.bg-red-500.text-white.rounded-md.px-2 Alka
+          span.bg-green-500.text-white.px-2.rounded-md TRAZ
+        ul.inline-flex.items-center
+          li.px-2(class='md:px-4')
+            a.text-gray-600.font-semibold(href='' class='hover:text-purple-500')  Home 
+          li.px-2.hidden(class='md:px-4 md:block')
+            a.text-gray-500.font-semibold(href='' class='hover:text-purple-500')  Login 
+          li.px-2.hidden(class='md:px-4 md:block')
+            a.text-gray-500.font-semibold(href='' class='hover:text-purple-500')  Register 
+      // header ends here
+      main.mt-10
+        .mb-4.w-full.container.mx-auto.relative(class='md:mb-0' style='height: 24em;')
+          .absolute.left-0.bottom-0.w-full.h-full.z-10(style='background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));')
+          img.absolute.left-0.top-0.w-full.h-full.z-0.object-cover(src='img/bgg.jpeg')
+          .p-4.absolute.bottom-0.left-0.z-20
+            a.px-4.py-1.text-green-200.inline-flex.items-center.justify-center.mb-2(href='#') DEVELOPPEMENT WEB
+            h2.text-4xl.font-semibold.text-gray-100.leading-tight
+              |Trouve ta formation de développeur web à distance
+            .flex.mt-3
+              img.h-10.w-10.rounded-full.mr-2.object-cover(src='https://randomuser.me/api/portraits/men/5.jpg')
+              div
+                p.font-semibold.text-gray-200.text-sm  Marcos MEDENOU
+                p.font-semibold.text-gray-400.text-xs  17 Février 2024 
+        .px-4.mt-12.text-gray-700.container.mx-auto.text-lg.leading-relaxed(class='lg:px-0')
+          p.pb-6.font-bold
+            |Tu es intéressé(e) par le métier de développeur web, mais tu ne te vois pas retourner sur les bancs de l’école ? Sache que tu peux suivre une formation au métier de développeur web, à distance, grâce à de nombreuses plateformes et écoles. Études Tech te dit quelles sont les meilleures et quelles compétences tu devras acquérir.
+          p.pb-6
+            |Egalement connu sous les noms de développeur informatique ou codeur web, le développeur web exerce son savoir-faire en concevant des sites web, des logiciels pour les entreprises et des applications web, selon la spécialité choisie. Cependant, il est important de noter que les clients sont de plus en plus en quête de développeurs web polyvalents, capables de créer à la fois des sites web et leurs équivalents pour appareils mobiles. Ainsi, se spécialiser dans les deux domaines peut représenter une excellente voie pour entamer une carrière fructueuse.
+          p.pb-6
+            | Le développeur informatique peut exercer en tant qu’employé au sein d’une entreprise, d’une agence web ou encore d’une agence de communication. Toutefois, il a également la possibilité de travailler en tant qu’indépendant, en se lançant à son propre compte. Dans cette perspective, il devra prospecter des clients pour décrocher des missions ponctuelles.
+          .border-l-4.border-gray-500.pl-4.mb-6.italic.rounded
+            | Le développeur d’applications pour mobiles représente une spécialisation dans le domaine du développement web. Son rôle consiste à créer des applications spécifiquement adaptées aux appareils mobiles, tels que des applications utilitaires, des jeux vidéo, et bien d’autres encore. Étant donné que la demande en applications mobiles est en constante augmentation, cette spécialité est particulièrement recherchée de nos jours.
+          p.pb-6.text-3xl.text-red-500
+            | Quel est le salaire d’un développeur web ?
+          p.pb-6
+            | Le développeur web perçoit en moyenne un salaire mensuel allant de 1 900 € à 2 500 €, avec sa rémunération étroitement liée à son expérience. Un codeur web expérimenté peut espérer toucher entre 35 000 € et 45 000 € par an. Par ailleurs, la maîtrise des langages de programmation peut influencer le niveau de salaire. Un programmeur polyglotte présente un profil plus attractif, bien que l’expérience demeure le critère primordial.
+          p.pb-6
+            | En effet, la création d’un site internet exige rigueur et autonomie. Cependant, même les récents diplômés ont accès à des offres d’emploi correspondantes à leur profil.
+
+      // main ends here
+      // footer
+      footer.border-t.mt-32.pt-12.pb-32.px-4(class='lg:px-0')
+        .flex
+          .w-full(class='md:w-1/3 lg:w-1/4')
+            h6.font-semibold.text-gray-700.mb-4 Company
+            ul
+              li
+                a.block.text-gray-600.py-2(href='') Team
+              li
+                a.block.text-gray-600.py-2(href='') About us
+              li
+                a.block.text-gray-600.py-2(href='') Press
+          .w-full(class='md:w-1/3 lg:w-1/4')
+            h6.font-semibold.text-gray-700.mb-4 Content
+            ul
+              li
+                a.block.text-gray-600.py-2(href='') Blog
+              li
+                a.block.text-gray-600.py-2(href='') Privacy Policy
+              li
+                a.block.text-gray-600.py-2(href='') Terms &amp; Conditions
+              li
+                a.block.text-gray-600.py-2(href='') Documentation

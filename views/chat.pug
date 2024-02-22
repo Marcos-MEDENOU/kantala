@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css', integrity='sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='./style.css')
+    title Chat app
+    style
+        include ./chat.css
+  body.my-8
+    h1.title.text-gray-600 MarcoChat &#x1F4AC;
+    .main
+      .name
+        span
+          i.far.fa-user
+        input#name-input.name-input(type='text', value='anonymous', maxlength='20')
+      ul#message-container.message-container
+        // These li elements are only for reference, and therefore, they are commented out...
+        li.message-left
+          p.message
+            | lorem impsun
+            span bluebird &#x25CF; 26 July 10:40
+        li.message-right
+          p.message
+            | lorem impsun
+            span bluebird &#x25CF; 26 July 10:40
+        li.message-feedback
+          p#feedback.feedback &#x270D;&#xFE0F; killer is typing a message...
+      form#message-form.message-form
+        input#message-input.message-input(type='text', name='message')
+        .v-divider
+        button.send-button(type='submit')
+          | send 
+          span
+            i.fas.fa-paper-plane
